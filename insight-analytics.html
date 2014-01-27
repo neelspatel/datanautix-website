@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+
+    <title>Datanautix - Customer Insight Analytics</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:700' rel='stylesheet' type='text/css'>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+
+    <script>
+
+      $(document).ready(function() {
+
+        var offset = 60;
+
+        setTimeout(function() {
+          if (window.location.hash) {
+            console.log(window.location.hash)
+            scrollBy(0, -offset);
+          }
+        }, 1);
+
+        $('.well-holder a').click(function(event) {
+            event.preventDefault();
+            $($(this).attr('href'))[0].scrollIntoView();            
+            //window.location.hash = $(this).attr('href');
+            window.location.hash = "" + $(this).attr('href');
+            scrollBy(0, -offset);
+
+        });
+      })
+    </script>
+  
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-spy="scroll" data-target="#sidebar" data-twttr-rendered="true" data-offset="120">
+
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand header-font" href="#">
+          Datanautix <span class = "orange">Inc</span>
+          </a>
+        </div>
+        <div class="navbar-collapse collapse">          
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="#">Customer Analytics</a></li>
+            <li><a href="data-analytics.html">Data Analytics</a></li>            
+            <li><a href="press.html">Press</a></li>
+            <li><a href="contact.html">Contact/About Us</a></li>            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    
+      <div class ="city">
+        <div class = "inner-city">        
+          <h1>Customer Interaction Analytics for <span class="orange">happier customers</span> and <span class="orange">lower costs</span>.</h1>                                                                   
+        </div>
+      </div>
+
+      <div class = "jumbotron subheadingbox " id = "crumbs"> 
+        <h4>Nothing is more important than customer service for building brand loyalty and customer lifetime value.</h4>
+        <p class = "subheading">With proven processes and innovative software, we have the tools to reach higher customer satisfaction while lowering call center operating costs. Our methodologies have led to <span class="orange">12% increases in customer satisfaction</span> and have <span class="orange">saved our clients millions</span> in operating costs. Check out some of our offerings below.</p>
+      </div>
+
+      
+     
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron well-holder">
+        <div class = "row">
+          <div class = "col-md-2" id = "sidebar-container">
+              <div id = "sidebar">
+              <ul class="nav nav-pills nav-stacked affix-top">
+                <li><a href="#interaction-analytics"><i class="icon-chevron-right"></i>Customer Interaction Analytics</a></li>
+                <li><a href="#call-monitoring"><i class="icon-chevron-right"></i>Call Monitoring Software</a></li>
+                <li><a href="#agent-training"><i class="icon-chevron-right"></i>Agent Training</a></li>
+                <li><a href="#feedback-analysis"><i class="icon-chevron-right"></i>Survey Feedback Software</a></li>
+                <li><a href="#agent-evaluation"><i class="icon-chevron-right"></i>Agent Evaluation Software</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class = "col-md-10">
+            <section class="well scrollwell" id="interaction-analytics">
+              <div class = "row">
+                <div class = "col-md-3">
+                  <img src="img/custinteract.png" class = " img-side"/>
+                </div>
+                <div class = "col-md-9" id = "interaction-analytics">
+                  <h3>Customer Interaction Analytics</h3>
+                  <p>Datanautix offers services to optimize your customer interactions.</p>
+                  <p>Our analysts will use our <a href = "#call-monitoring">industry leading software</a> to mine hundreds of attributes from your recorded customer service calls. After extracting your main drivers of unhappy customers and low net promoter scores, our analysts will identify the best business solutions. We'll then develop a predictive model that shows how any process changes you make will lead to CSAT or handle time improvements.</p>
+
+                  <div class="alert alert-success">
+                    "Datanautix's Interaction Analytics identified some pretty major issues in our customer service process. We ended up increasing CSAT [customer satisfaction] by 15% and decreasing call time by 20%. Between the new revenue and reduced costs, the ROI with Datanautix has been near immediate." <br/>  - <b>J.B., call center exec</b>
+                  </div>
+
+                  <p>Give us <b>150 customer service call</b> recordings and we'll give you <b>15% happier customers</b> and <b>22% shorter calls.</b></p>
+                </div>
+              </div>
+            </section>
+            <section class="well scrollwell" id="call-monitoring">
+              <div class = "row">
+                <div class = "col-md-3">
+                  <img src="img/cms.png" class = " img-side"/>
+                </div>
+                <div class = "col-md-9">
+                  <h3>Call Monitoring Software</h3>
+                  <p>Our industry leading call monitoring software allows analysts to quickly record hundreds of call attributes. Some of the key features include:</p>
+                    <dl class="dl-horizontal">
+                      <dt>Web enabled</dt> <dd>Our software runs in the browser, meaning no install needed. It works on any device (from Windows to Macs to iPads) and anywhere (even offline!)</dd>
+                      <dt>Security compliant</dt><dd>Our software can be installed within your secure network to protect all data.</dd>
+                      <dt>Easy on resources</dt><dd>Unlike a lot of software out there, we don't need any complicated servers or huge computers to run. Trust us - we're IT approved!</dd>
+                    </dl>
+                  <p><a href = "#">Contact us</a> if you'd like to learn more or set up a demo.</p>
+                </div>
+              </div>
+            </section>
+            <section class="well scrollwell" id="agent-training">
+              <div class = "row">
+                <div class = "col-md-3">
+                  <img src="img/train.png" class = " img-side"/>
+                </div>
+                <div class = "col-md-9">
+                  <h3>Agent Training</h3>
+                  <p>Ensure your customers have the best experience possible by having Datanautix train your customer service agents.</p>
+                  <p>Our team has significant international experience training customer service agents, including agents in the USA, Phillipines, India, Nicaragua, Australia, and more. We offer cultural training as well as customer resolution training.
+                  </p>
+
+
+                  <div class="alert alert-success">
+                    "The techniques that Sanjay [Datanautix's CEO] taught our agents brought us smoother and faster customer interactions." <br/>  - <b>call center exec in the Phillipines</b>
+                  </div>
+                </div>
+              </div>
+
+            </section>            
+            <section class="well scrollwell" id="feedback-analysis">
+              <div class = "row">
+                <div class = "col-md-3">
+                  <img src="img/fas.png" class = " img-side"/>
+                </div>
+                <div class = "col-md-9">
+                  <h3>Survey Feedback Software</h3>
+                  <p>As useful as customer satisfaction surveys are, it can be incredibly difficult to read through hundreds or thousands of surveys to identify key problems. Our software uses proprietary natural language processing to identify key topics in a set of verbatim comments, and then gives you the most relevant comments to read. Some of the great features include: </p>
+                    <dl class="dl-horizontal">
+                      <dt>Web enabled</dt> <dd>Access this software anywhere and anytime, with no install needed</dd>
+                      <dt>Blazing fast</dt><dd>We can crunch thousands of verbatim comments in just seconds</dd>
+                      <dt>Filtering tools</dt> <dd>Use our full-text search, filter by net promoter score, or even add custom numerical filters</dd>
+                      <dt>Full collaboration</dt><dd>Easily share your analysis with built in collaboration tools</dd>
+                      <dt>Easy export</dt> <dd>One click to export data to Excel</dd>
+                    </dl>
+                  <p>Interested in seeing more? <a href = "#">Let's arrange a demo</a> and change how you look at verbatim comments.</p>
+                </div>
+              </div>
+            </section>            
+            <section class="well scrollwell" id="agent-evaluation">
+              <div class = "row">
+                <div class = "col-md-3">
+                  <img src="img/agenteval.png" class = " img-side"/>
+                </div>
+                <div class = "col-md-9">
+                  <h3>Agent Evaluation Software</h3>
+                  <p>Hiring and training new call center agents is both costly and time consuming. Our software can <b>predict who will be a good agent</b> right from the start.</p>
+                  <p>Use our agent evaluation software during the hiring process to predict how well your potential agents will work with customers, making hiring a breeze and reducing churn. We measure a variety of factors, from empathy to tone of voice, and use them to predict how well recieved the agent will be by customers.</p>                  
+                  <p><a href = "#">Give it a try</a> and change how you hire call center agents forever.</p>
+                </div>
+              </div>
+            </section>            
+          </div>
+        </div>
+
+      </div>     
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bs.js"></script>
+  </body>
+</html>

@@ -1,0 +1,248 @@
+body {  
+  padding-top: 50px;
+
+  background-image: url("../img/tree_bark.png");
+  background-repeat: repeat;  
+}
+
+.body-font {
+  font-family:14px/1.75 "Helvetica Neue", Arial, Helvetica, sans-serif !important;
+  font-weight:200;
+}
+
+.header-font {  
+  font-size: 200%;
+  font-weight: 700;  
+  color:#014E82 !important;
+
+  font-family: 'Montserrat Alternates', sans-serif;
+
+}
+
+.blue {
+  color:#014E82 !important;
+}
+
+.orange {
+  color:rgb(230,116,14);
+}
+
+.navbar {
+  margin-bottom: 0px !important;
+}
+
+.city {
+  width: 100%;  
+  background-image: url("../img/esch.png");
+  background-repeat: repeat;    
+}
+
+.inner-city {
+  margin-left: auto;
+  margin-right: auto;  
+  width: 100%;
+  height: 100%;
+  /*background-color: rgba(1,78,130,0.6);*/
+  background-color: rgba(42,142,209,0.6);
+  text-align: center;
+  padding-top:5px;
+
+  color: rgb(230,230,230) !important;
+
+  padding-top: 20px;
+  padding-bottom: 30px;
+
+}
+
+.inner-city>h1 {
+  /*font-size:200%;*/
+}
+
+.subtitle {
+  font-size: 21px;
+  font-weight: 200;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+}
+
+hr.big-symbol {
+  padding: 0;
+  color: rgba(128,128,128,0.5);
+  text-align: center;
+  height: 1px;
+  border-top: 1px solid rgba(230,230,230,0.5);
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+hr.big-symbol:after{
+  content: "§";
+  text-shadow: 0 -2px 2px rgba(0,0,0,0.5);
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 2em;
+  padding: 0 0.25em;  
+}
+
+.glyphicon {
+  padding-right: 30px;
+}
+
+.well-holder {  
+  padding: 30px;
+  background-color:rgba(238,238,238,0.5);
+  margin-bottom:0px;
+  padding-bottom:10px;
+}
+
+.well-info {
+  font-size: 75%;
+}
+
+.subheading {
+  font-size: 75%;
+}
+
+.subheadingbox {
+  padding-top: 10px;
+  padding-bottom:10px;
+  margin-bottom:0px;
+  background-color:rgba(246,246,246,0.7);
+}
+
+.bluebox {
+  background-color:rgba(42,142,209,0.3); 
+}
+
+.how {  
+  padding: 30px;
+
+  background-color:rgba(42,142,209,0.3);
+  margin-bottom:0px;
+}
+
+.how>h1 {
+  font-size:36px;
+  text-align: center;
+  margin-top:0px;
+}
+
+.scrollwell{
+  padding: 10px;
+  margin-bottom:20px;     
+  box-shadow: 3px 3px 3px #888;  
+}
+
+.scrollwell p, .scrollwell label, .dl-horizontal {
+  font-size:65%;
+  line-height: 1.5;
+}
+
+.scrollwell h3 {
+  padding-top: 0px;
+  margin-top:0px;
+}
+
+
+.affix-top {
+  position:static;
+}
+
+@media (min-width: 992px) {
+  .affix-top{
+    position: fixed; /* Undo the static from mobile first approach */    
+  } 
+}
+
+#sidebar-container {
+  padding-left: 0px;
+}
+
+#sidebar {
+  font-size: 65% !important;
+  padding-left:0px;
+  
+}
+
+#sidebar ul li, #sidebar ul li a {
+  height:24px !important;
+
+  padding-left:5px !important;
+  padding-right:5px !important;
+  line-height:1 !important;  
+}
+
+#sidebar>ul>li.active, #sidebar>ul>li.active>a{
+  height:24px !important;
+
+  padding-top:5px !important;
+  z-index:99;
+}
+
+#sidebar>ul>li>a:hover{  
+}
+
+.alert-success {
+  padding-top:0px;
+  padding-bottom:0px;
+  font-size:67%;
+  line-height: 1.5;
+}
+
+
+.img-side { display:block;
+  width: 150px; height: 150px; margin-left: auto; margin-right:auto;}
+
+.img-side-small { display:block;
+  width: 75px; height: 75px; margin-left: auto; margin-right:auto;}
+
+.bx-viewport {
+  border:0px !important;
+  position:static !important;
+  background-color:transparent !important;
+
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.bxslider {
+  padding-left:0px !important;
+}
+
+.bxslider>li {
+  min-height:150px;
+}
+
+.bxslider>li>h1 {
+  padding-top:0px;
+  margin-top:0px;
+  margin-bottom:20px;
+}
+
+.bxslider>li p {
+  font-size:18px !important;
+}
+
+.bx-wrapper {
+  margin-bottom:10px !important;
+  
+}
+
+.bx-pager-link {
+  background: green;
+}
+
+.sliderlink, .sliderlink:hover {
+  color:inherit !important;
+  text-decoration: none !important
+}
+
+.date {
+  text-align: center !important;
+  font-size: 180% !important;
+  line-height: 120% !important;
+  color:rgb(230,116,14) !important;
+}
