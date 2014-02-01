@@ -70,7 +70,7 @@
 
         $('#emailForm').submit( function() {
           
-          var promise = Kinvey.execute(':email', {
+          var promise = Kinvey.execute('email', {
               email: 'got2surf@gmail.com',
               project: 'Blue'
           }, {
