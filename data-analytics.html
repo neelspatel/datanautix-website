@@ -58,9 +58,24 @@
             }, function(error) {
                 console.log('Kinvey Ping Failed. Response: ' + error.description);
             });
-        
+
         }, function(error) {
             console.log("Error setting up Kinvey.")
+        });
+
+        $('#emailForm').submit( function() {
+          
+          var promise = Kinvey.execute(':endpoint', {
+              email: 'got2surf@gmail.com',
+              project: 'Blue'
+          }, {
+              success: function(response) {
+                  console.log(response);
+              }
+          });
+
+          
+          return false;
         });
 
         
