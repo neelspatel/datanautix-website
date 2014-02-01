@@ -186,7 +186,7 @@ hr.big-symbol:after{
 #sidebar>ul>li>a:hover{  
 }
 
-.alert-success {
+.alert-success, .alert-danger {
   padding-top:0px;
   padding-bottom:0px;
   font-size:67%;
