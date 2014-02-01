@@ -22,7 +22,7 @@
     <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:700' rel='stylesheet' type='text/css'>
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-
+    <script src="http://da189i1jfloii.cloudfront.net/js/kinvey-html5-1.1.5.min.js"></script>
 
     <script>
       $(document).ready(function() {
@@ -44,6 +44,27 @@
             scrollBy(0, -offset);
 
         });
+
+        var promise = Kinvey.init({
+            appKey    : 'kid_PP0_NSCP4q',
+            appSecret : '2cbfd2f3600e45a984495990dd6fce6e'
+        });
+        promise.then(function(activeUser) {
+            console.log("Kinvey setup worked.")
+
+            var promise = Kinvey.ping();
+            promise.then(function(response) {
+                console.log('Kinvey Ping Success. Kinvey Service is alive, version: ' + response.version + ', response: ' + response.kinvey);
+            }, function(error) {
+                console.log('Kinvey Ping Failed. Response: ' + error.description);
+            });
+        
+        }, function(error) {
+            console.log("Error setting up Kinvey.")
+        });
+
+        
+        
       })
     </script>
   
@@ -179,7 +200,7 @@
                     <h3>So what's your biggest data problem?</h3>
                     <p>Whether it's software, consulting, or training, let us know what you need and we'll get back to you as soon as we can.</p>
 
-                    <form class="form-horizontal" role="form">
+                    <form class="form-horizontal" role="form" id = "emailForm">
                       <div class="form-group">
                         <label for="inputEmail" class="col-sm-2 control-label">Email:</label>
                         <div class="col-sm-10">
@@ -189,7 +210,7 @@
                       <div class="form-group">
                         <label for="project" class="col-sm-2 control-label">Potential project:</label>
                         <div class="col-sm-10">
-                          <textarea class="form-control" id = "project" rows="3"></textarea>
+                          <textarea class="form-control" id = "inputProject" rows="3"></textarea>
                         </div>
                       </div>                
                       <div class="form-group">
