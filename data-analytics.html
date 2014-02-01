@@ -71,7 +71,7 @@
         $('#emailForm').submit( function() {
           
           var promise = Kinvey.execute('email', {
-              email: $("#inputEmail").val()
+              email: $("#inputEmail").val(),
               project: $("#inputProject").val()
           }, {
               success: function(response) {
