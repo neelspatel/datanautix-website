@@ -77,12 +77,13 @@
               success: function(response) {
                   console.log("Success");
                   console.log(response);
-                  $("#emailAlert").html("<div class='alert alert-success'>Thanks! We will get back to you as soon as possible.</div>");
+                  $("#emailAlert").html("<div class='alert alert-success'><strong>Thanks!</strong> We will get back to you as soon as possible.</div>");
 
               },
               error: function(response) {
                 console.log("Failure");
                 console.log(response);
+                $("#emailAlert").html("<div class='alert alert-danger'><strong>Sorry about that</strong>  - something went wrong. Could you email us directly at <a href='mailto:sales@datanautix.com?subject=Datanautix%20Contact'>sales@datanautix.com</a>? Thanks!</div>");
               }
           });
 
