@@ -55,6 +55,11 @@
             var promise = Kinvey.ping();
             promise.then(function(response) {
                 console.log('Kinvey Ping Success. Kinvey Service is alive, version: ' + response.version + ', response: ' + response.kinvey);
+                var promise = Kinvey.User.login('website', 'dummy', {
+                    success: function(response) {
+                        console.log("Logged in.")
+                    }
+                });
             }, function(error) {
                 console.log('Kinvey Ping Failed. Response: ' + error.description);
             });
@@ -65,12 +70,15 @@
 
         $('#emailForm').submit( function() {
           
-          var promise = Kinvey.execute(':endpoint', {
+          var promise = Kinvey.execute(':email', {
               email: 'got2surf@gmail.com',
               project: 'Blue'
           }, {
               success: function(response) {
                   console.log(response);
+              },
+              error: function(response) {
+                console.log(response);
               }
           });
 
