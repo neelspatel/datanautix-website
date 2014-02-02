@@ -41,6 +41,7 @@
         }, 1);
 
         $('.well-holder a').click(function(event) {
+            console.log($($(this).attr('href')));
             if($($(this).attr('href')).exists())
             {
               event.preventDefault();
