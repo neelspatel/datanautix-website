@@ -31,6 +31,14 @@
 
     
     <script>
+      var delay = (function(){
+        var timer = 0;
+        return function(callback, ms){
+          clearTimeout (timer);
+          timer = setTimeout(callback, ms);
+        };
+      })();
+
       $(document).ready(function() {
         $('.bxslider').bxSlider({
           mode: 'horizontal',
@@ -44,16 +52,18 @@
 
         //ties to keep all wells the same height
         $( window ).resize(function() {
-          var max_val = 0;
-          var wells = $(".well");
+          delay(function() { 
+            var max_val = 0;
+            var wells = $(".well");
 
-          $.each(wells, function(index,value) {
-            max_val = Math.max(max_val, $(value).height());
-          })
+            $.each(wells, function(index,value) {
+              max_val = Math.max(max_val, $(value).height());
+            })
 
-          $.each(wells, function(index,value) {
-            $(value).height(max_val);
-          })
+            $.each(wells, function(index,value) {
+              $(value).height(max_val);
+            })
+          }, 500)
           
         });
       })
