@@ -23,7 +23,7 @@
     <link href='css/fonts.css' rel='stylesheet' type='text/css'>
 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="jQuery.js"></script>
+    <script src="js/jQuery.js"></script>
 
     <script src="slider/plugins/jquery.easing.1.3.js"></script>
     <script src="slider/jquery.bxslider.min.js"></script>    
@@ -40,6 +40,21 @@
           auto:true,  
           useCSS:false,        
           easing: 'linear',                    
+        });
+
+        //ties to keep all wells the same height
+        $( window ).resize(function() {
+          var max = 0;
+          var wells = $(".well");
+
+          $.each(wells, function(index,value) {
+            max = max(max, $(value).height());
+          })
+
+          $.each(wells, function(index,value) {
+            $(value).height(max);
+          })
+          
         });
       })
     </script>
