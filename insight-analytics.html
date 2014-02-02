@@ -28,6 +28,9 @@
 
       $(document).ready(function() {
 
+        jQuery.fn.exists = function(){return jQuery(this).length>0;}
+
+
         var offset = 60;
 
         setTimeout(function() {
@@ -38,11 +41,14 @@
         }, 1);
 
         $('.well-holder a').click(function(event) {
-            event.preventDefault();
-            $($(this).attr('href'))[0].scrollIntoView();            
-            //window.location.hash = $(this).attr('href');
-            window.location.hash = "" + $(this).attr('href');
-            scrollBy(0, -offset);
+            if($($(this).attr('href')).exists())
+            {
+              event.preventDefault();
+              $($(this).attr('href'))[0].scrollIntoView();            
+              //window.location.hash = $(this).attr('href');
+              window.location.hash = "" + $(this).attr('href');
+              scrollBy(0, -offset);
+            }
 
         });
       })
