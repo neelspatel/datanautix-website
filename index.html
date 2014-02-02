@@ -48,7 +48,7 @@
           var wells = $(".well");
 
           $.each(wells, function(index,value) {
-            max_val = max(max_val, $(value).height());
+            max_val = Math.max(max_val, $(value).height());
           })
 
           $.each(wells, function(index,value) {
