@@ -44,15 +44,15 @@
 
         //ties to keep all wells the same height
         $( window ).resize(function() {
-          var max = 0;
+          var max_val = 0;
           var wells = $(".well");
 
           $.each(wells, function(index,value) {
-            max = max(max, $(value).height());
+            max_val = max(max_val, $(value).height());
           })
 
           $.each(wells, function(index,value) {
-            $(value).height(max);
+            $(value).height(max_val);
           })
           
         });
