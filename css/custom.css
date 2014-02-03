@@ -232,8 +232,9 @@ hr.big-symbol:after{
   
 }
 
-.bx-pager-link {
-  background: green;
+.bx-pager.bx-default-pager a {
+  
+  background: rgb(230, 230, 230) !important;
 }
 
 .sliderlink, .sliderlink:hover {
