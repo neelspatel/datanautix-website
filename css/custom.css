@@ -237,7 +237,7 @@ hr.big-symbol:after{
   background: rgb(230, 230, 230) !important;
 }
 
-.bx-pager.bx-default-pager a:active {
+.bx-pager.bx-default-pager a.active {
   
   background: #111 !important;
 }
